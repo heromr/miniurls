@@ -1,28 +1,20 @@
 from setuptools import setup, find_packages
-from pathlib import Path
 
-this_directory = Path(__file__).parent
-long_description = (this_directory / "README.md").read_text()
+VERSION = '0.0.3'
+DESCRIPTION = 'A Library With shrtco.de Api'
+
+with open("README.md", "r") as f:
+    LONG_DESCRIPTION = f.read()
 
 setup(
-  name='miniurls',
-  version='0.0.2',
-  author="Hero",
-  long_description=long_description,
-  long_description_content_type='text/markdown',
-  packages=find_packages('src'),
-  package_dir={'': 'src'},
-  url='https://github.com/heromr/miniurls',
-  keywords=[
-      'miniurls'
-      'miniurl'
-      'miniurlpy'
-      'heromr'
-      'short link'
-      'shortener'
-      'short'
-      'short url'
-      'url shortener'
-  ],
-  install_requires=[],
+    name="miniurls",
+    version=VERSION,
+    author="hero",
+    author_email="mrhero4006@gmail.com",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    packages=find_packages(),
+    install_requires=[],
+    keywords=['miniurls', 'Api', 'miniurl', 'hero', 'heromr'],
 )
